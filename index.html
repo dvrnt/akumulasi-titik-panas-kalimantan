@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b3a61">
+  <title>Hotspot high Kalimantan, 1-28 Agustus 2026</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="lite.css">
+</head>
+<body>
+  <main id="map" aria-label="Peta statis hotspot high Kalimantan"></main>
+  <header class="topbar">
+    <p class="eyebrow">SIPONGI · 1-28 AGUSTUS 2026</p>
+    <h1>Akumulasi titik panas di Kalimantan</h1>
+    <p class="date">Confidence tinggi · akumulasi periode</p>
+    <p class="source-credit">Sumber: Data akumulasi hotspot SiPongi<br>Kementerian Kehutanan · Periode 1-28 Agustus 2026 · Filter tingkat kepercayaan tinggi<br>Tutupan lahan: MapBiomas Indonesia 2024<br>Peta konsesi: Global Forest Watch<br>Diolah (DIV/SPW/XNA/JUD)</p>
+  </header>
+  <section class="metrics" aria-label="Ringkasan hotspot high">
+    <div><span>Hotspot high</span><strong id="totalHigh">—</strong></div>
+    <div><span>Dalam konsesi</span><strong id="insideConcession">—</strong></div>
+    <div><span>Persentase konsesi</span><strong id="concessionPercent">—</strong></div>
+  </section>
+  <aside class="controls" aria-label="Kontrol peta">
+    <label><input id="hotspotToggle" type="checkbox" checked><i class="high"></i>Titik hotspot high</label>
+    <div id="concessionTypeControls" class="concession-types">
+      <span class="control-caption">Jenis konsesi</span>
+      <label><input type="checkbox" data-concession-type="Oil Palm" checked>Kelapa sawit</label>
+      <label><input type="checkbox" data-concession-type="Mining" checked>Tambang</label>
+      <label><input type="checkbox" data-concession-type="Logging" checked>Kayu</label>
+      <label><input type="checkbox" data-concession-type="Wood Fiber" checked>Kayu fiber</label>
+    </div>
+  </aside>
+  <div id="loading" role="status">Memuat hotspot high…</div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="lite.js"></script>
+</body>
+</html>
